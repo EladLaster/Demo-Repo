@@ -6,7 +6,7 @@ int main(){
     int a;
     int b;
    
-    scanf ("%d %d", &a , &bmmmser4rfd);
+    scanf ("%d %d", &a , &b);
 
     printf("The Armstrong numberes are");
     for(int i=a;i<=b;i++){
