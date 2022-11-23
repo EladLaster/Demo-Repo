@@ -44,5 +44,6 @@ advancedClassificationLoop.o: advancedClassificationLoop.c
 advancedClassificationRecursion.o: advancedClassificationRecursion.c
 	$(CC) $(FLAGS) -c advancedClassificationRecursion.c
 	.PHONY: clean all 
-	clean: 
-		rm -f *.o *-a *.so makemaindrec makemaindloop
+
+clean: 
+	rm -f *.o *.a *.so makemaindrec makemaindloop
