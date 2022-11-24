@@ -1,4 +1,4 @@
-all: makeloops makerecursives makerecursived makeloopd mains maindloop maindrec
+all: loops recursives recursived loopd mains maindloop maindrec
 
 CC=gcc
 FLAGS=-Wall -g
@@ -19,21 +19,21 @@ main.o: main.c NumClass.h
 
 
 
-makeloops: libclassloops.a 
+loops: libclassloops.a 
 libclassloops.a: basicClassification.o advancedClassificationLoop.o
 	$(AR) -rcs libclassloops.a basicClassification.o advancedClassificationLoop.o
 	ranlib libclassloops.a
 
-makerecursives: libclassrec.a
+recursives: libclassrec.a
 libclassrec.a: basicClassification.o advancedClassificationRecursion.o
 	$(AR) -rcs libclassrec.a basicClassification.o advancedClassificationRecursion.o
 	ranlib libclassrec.a
 
-makerecursived: libclassrec.so
+recursived: libclassrec.so
 libclassrec.so: basicClassification.o advancedClassificationRecursion.o
 	$(CC) $(FLAGS) -shared -o libclassrec.so basicClassification.o advancedClassificationRecursion.o -lm
 
-makeloopd: libclassloops.so
+loopd: libclassloops.so
 libclassloops.so: basicClassification.o advancedClassificationLoop.o
 	$(CC) $(FLAGS) -shared -o libclassloops.so basicClassification.o advancedClassificationLoop.o -lm
 
