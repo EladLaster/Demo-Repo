@@ -14,6 +14,9 @@ maindloop: main.o libclassloops.so
 maindrec: main.o libclassrec.so
 	$(CC) $(FLAGS) main.o libclassrec.so -o maindrec -lm
 
+main.o: main.c NumClass.h
+	$(CC) $(FLAGS) -c main.c
+
 
 
 makeloops: libclassloops.a 
