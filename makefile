@@ -6,13 +6,13 @@ AR=ar
 
 
 mains: main.o libclassrec.a
-	$(CC) $(FLAGS) main.o libclassrec.a -o mains -lm
+	$(CC) $(FLAGS) -fPIC main.o libclassrec.a -o mains -lm
 
 maindloop: main.o libclassloops.so
-	$(CC) $(FLAGS) main.o libclassloops.so -o maindloop -lm
+	$(CC) $(FLAGS) -fPIC main.o libclassloops.so -o maindloop -lm
 
 maindrec: main.o libclassrec.so
-	$(CC) $(FLAGS) main.o libclassrec.so -o maindrec -lm
+	$(CC) $(FLAGS) -fPIC main.o libclassrec.so -o maindrec -lm
 
 main.o: main.c NumClass.h
 	$(CC) $(FLAGS) -c main.c
