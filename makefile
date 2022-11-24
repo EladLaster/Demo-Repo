@@ -15,7 +15,7 @@ maindrec: main.o libclassrec.so
 	$(CC) $(FLAGS) -fPIC main.o libclassrec.so -o maindrec -lm
 
 main.o: main.c NumClass.h
-	$(CC) $(FLAGS) -c main.c
+	$(CC) $(FLAGS) -fPIC -c main.c
 
 
 
@@ -47,7 +47,7 @@ advancedClassificationLoop.o: advancedClassificationLoop.c
 advancedClassificationRecursion.o: advancedClassificationRecursion.c
 	$(CC) $(FLAGS) -c advancedClassificationRecursion.c
 	
-.PHONY: clean all 
+.PHONY: all clean
 
 clean: 
-	rm -f *.o *.a *.so makemaindrec makemaindloop mains maindrec maindloop
+	rm -f *.o *.a *.so mains maindrec maindloop
