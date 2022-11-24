@@ -8,7 +8,7 @@ int main(){
    
     scanf ("%d %d", &a , &b);
 
-    printf("The Armstrong numberes are");
+    printf("The Armstrong numbers are");
     for(int i=a;i<=b;i++){
         if(isArmstrong(i))
         printf(" %d", i);
@@ -20,13 +20,13 @@ int main(){
         printf(" %d", i);
     }
 
-       printf("\nThe Prime numberes are");
+       printf("\nThe Prime numbers are");
     for(int i=a;i<=b;i++){
         if(isPrime(i))
         printf(" %d", i);
     }
 
-     printf("\nThe Strong numberes are");
+     printf("\nThe Strong numbers are");
     for(int i=a;i<=b;i++){
         if(isStrong(i))
         printf(" %d", i);
